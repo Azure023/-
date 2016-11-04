@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+ 
+<html>
+  
+<body>
+
+<p>Select local CSV File:</p>
+<input id="csv" type="file">
+
+<output id="out">
+    file contents will appear here
+</output>
+ 
+<script>
+
+var fileInput = document.getElementById("csv"),
+
+    readFile = function () {
+        var reader = new FileReader();
+        reader.onload = function () {
+            document.getElementById('out').innerHTML = reader.result;
+        };
+        // start reading the file. When it is done, calls the onload event defined above.
+        reader.readAsBinaryString(fileInput.files[0]);
+    };
+
+fileInput.addEventListener('change', readFile);
+
+
+var StudentDetails = { //Object
+	Name: 
+	Age: 
+}; 
+
+var str = "How are you doing today?"; //turn string into a variable
+var res = str.split(" "); //Splitting up the text file
+
+
+/*---------------------------------------------------------------------------
+- 	WHAT WE NEED TO DO:														-
+-		- read text file													-
+-		- split text file													- 
+-		- put in student detail												-
+-		- push into array													-
+-		- modify bubble sort to sort										-
+-		- sort by Array Student Details 									-
+-			- Age															-																-
+---------------------------------------------------------------------------*/
+
+
+/*var Values = [Ages to Sort.txt];
+var Last = Values.length - 1; //number of names in the array
+var Swapped = true;
+
+document.write(Values); 
+
+while (Swapped == true){
+	Swapped = false;
+		var i = 0;
+			while (i < Last){ 
+				if (Values[i] > Values[i + 1]){
+					Swap(Values, i, i + 1); 
+					Swapped = true; 
+				} 
+				i++; 
+			}
+		Last--; 
+};
+
+function Swap(Values, A, B) {
+	var TempValue = Values[A]; 
+	Values[A] = Values[B]; 
+	Values[B] = TempValue; 	
+}; 
+
+document.write("<br>" + Values); */
+
+</script>
+ 
+</body>
+ 
+</html>
