@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+ 
+<html>
+  
+<body>
+
+<script>
+var FoundIt = false;
+var Values = [1, 23, 26, 56, 101, 109, 180, 201];
+var RequiredValue = Number(prompt("Give me a value to search"));
+var Lower = 0;
+var Upper = Values.length - 1;
+
+do {
+  var Middle = Math.round((Upper + Lower)/2);
+  //window.alert(Middle); 
+  //Middle = Math.round(Middle);
+  if (RequiredValue == Values[Middle]) {
+    FoundIt = true;
+    var PositionFound = Middle;
+  } else {
+    if (RequiredValue < Values[Middle]) {
+     Upper = Middle - 1;
+  } else {
+    Lower = Middle + 1;
+  };
+};
+//window.alert(FoundIt);
+} 
+
+while (FoundIt == false && Lower <= Upper);
+
+if (FoundIt == true) {
+    window.alert ("Required value found at " + PositionFound); 
+  } else {
+    window.alert ("This value has not been found, please try again :P ┻━┻︵ヽ(°□°)ﾉ︵ ┻━┻")
+
+}; 
+
+</script>
+ 
+</body>
+ 
+</html>
