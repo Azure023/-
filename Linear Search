@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+ 
+<html>
+  
+<body>
+
+<script>
+var position = 0;
+var FoundIt = false;
+var value = [];
+for (i = 0; i < 10; i++) {
+	value[i] = prompt("Type 10 values into an array");
+	};
+
+RequiredNumber =  prompt("Give me a value to search");
+
+while (FoundIt == false && position < 10){
+	if (value[position] != RequiredNumber){
+		position = position + 1; 
+	}else if(value[position] == RequiredNumber){
+		FoundIt = true; 
+		};
+	};
+	 
+if (FoundIt = true) {
+	window.alert ("Value found at position " + position); 
+	}else if(FoundIt = false){
+		window.alert("Required Value is not there. Why did you do no remember? Try again :D");
+	};
+
+</script>
+ 
+</body>
+ 
+</html>
