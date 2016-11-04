@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+ 
+<html>
+ 
+<body>
+
+<script>
+
+var Values = [23, 14, 56, 1, 18, 9, 2001];
+var Last = Values.length - 1; //number of names in the array
+var Swapped = true;
+
+document.write(Values); 
+
+while (Swapped == true){
+	Swapped = false;
+		var i = 0;
+			while (i < Last){ 
+				if (Values[i] > Values[i + 1]){
+						/*var TempValue = Values[i]; 
+						Values[i] = Values[i + 1]; 
+						Values[i + 1] = TempValue;
+					Swap(Values[i], Values[i + 1]); */
+					Swap(Values, i, i + 1); 
+					Swapped = true; 
+				} 
+				i++; 
+			}
+		Last--; 
+};
+
+function Swap(Values, A, B) {
+	var TempValue = Values[A]; 
+	Values[A] = Values[B]; 
+	Values[B] = TempValue; 	
+}; 
+/*function Swap(A, B) {
+	var TempValue = A; 
+	A = B; 
+	B = TempValue; 
+}; */
+
+document.write("<br>" + Values); 
+
+</script>
+ 
+</body>
+ 
+</html>
